@@ -8,7 +8,8 @@ import { BiCategory } from 'react-icons/bi'
 function Header() {
 	const url = import.meta.env.VITE_API_URL
 	const { data, isLoading, error } = useGetData(`${url}/categories/all`)
-	const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState<boolean>(false)
+	
 
 	if (isLoading) return <p className='text-center'>Loading...</p>
 	if (error) return <p className='text-center'>Error: {error.message}</p>
@@ -45,7 +46,7 @@ function Header() {
 					{isOpen && (
 						<div className='absolute  hover:cursor-pointer mt-3 w-60 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden animate-fadeIn z-20'>
 							<ul className='divide-y divide-gray-100'>
-								{data?.map((category: any) => (
+								{data?.map((category) => (
 									<li key={category?.id}>
 										<div
 											onClick={() => setIsOpen(false)}
