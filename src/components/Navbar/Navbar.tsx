@@ -13,7 +13,7 @@ function Navbar() {
 
 	return (
 		<section className='bg-[#EBEFF3] py-[11px]'>
-			<div className='max-w-[1180px] m-auto max-[1220px]:my-[20px]'>
+			<div className='max-w-[1180px] m-auto max-[1220px]:mx-[20px] flex items-center justify-between'>
 				<div className='flex items-center gap-[28px]'>
 					<Link to='#' className='flex items-center gap-[12px]'>
 						<GrLocation className='text-[20px]' />
@@ -61,7 +61,6 @@ function Navbar() {
 				<div className="">
 					<a className='text-[14px] font-["Roboto"] font-semibold text-[#545D6A] leading-[130%]' href="tel:+998711234567">+998 (71) 123-45-67</a>
 					<div className="">
-						
 					</div>
 				</div>
 			</div>
