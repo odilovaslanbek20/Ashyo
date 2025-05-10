@@ -8,6 +8,9 @@ function Header() {
 	const { data, isLoading, error } = useGetData(`${url}/categories/all`)
 	const [isOpen, setIsOpen] = useState(false)
 
+	console.log(data);
+	
+
 	if (isLoading) return <p>Loading...</p>
 	if (error) return <p>Error: {error.message}</p>
 
@@ -66,7 +69,7 @@ function Header() {
 
 			<div className="">
 				<div className="">
-					
+
 				</div>
 			</div>
 		</header>
